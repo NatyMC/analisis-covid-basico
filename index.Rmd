@@ -1,0 +1,13 @@
+---
+title: "Análisis de datos de Covid-19 Costa Rica"
+author: "Nataly Montoya"
+date: '2022-05-11'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Presentación 
+Este documento presenta gráficos generados a partir de los datos de COVI-19  en Costa Rica compartidos por el Ministerio de Salud en https://geovision.uned.ac.cr/oges/ 
