@@ -10,4 +10,34 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Presentación 
-Este documento presenta gráficos generados a partir de los datos de COVI-19  en Costa Rica compartidos por el Ministerio de Salud en https://geovision.uned.ac.cr/oges/ 
+Este documento presenta gráficos generados a partir de los datos de COVI-19  en Costa Rica compartidos por el Ministerio de Salud en [https://geovision.uned.ac.cr/oges/](https://geovision.uned.ac.cr/oges/) 
+
+## Entradas
+```{r carga-datos}
+covid <- read.csv(file = "05_10_22_CSV_GENERAL.csv", sep = ";")
+```
+
+
+## Procesamiento 
+
+### curación de datos 
+```{r conversión-fecha}
+covid$FECHA <- as.Date(covid$FECHA, format = "%d/%m/%Y")
+```
+
+
+
+## Salidas
+
+
+### Gráficos
+
+
+#### Casos acumulados
+ 
+
+##### Positivos 
+```{r casos-positivos-acumulados}
+plot(covid$FECHA, covid$positivos, main = "Casos acumulados positivos COVID-19 en costa Rica", xlab = "Fecha", ylab = "Casos")
+```
+
